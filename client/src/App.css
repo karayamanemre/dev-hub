@@ -1,5 +1,10 @@
 @import url('https://use.typekit.net/yva8dsi.css');
 
-* {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'indivisible', sans-serif;
 }
