@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="navbar bg-dark">
       <h1>
         <Link to="/">
-          <FontAwesomeIcon icon={faCode} /> DevConnector
+          <FontAwesomeIcon icon={faCode} /> Dev-Hub
         </Link>
       </h1>
       <ul>
