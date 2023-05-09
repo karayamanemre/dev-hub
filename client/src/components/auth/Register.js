@@ -1,11 +1,13 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Register = () => {
   return (
     <section className="container">
       <h1 className="large text-primary">Sign Up</h1>
       <p className="lead">
-        <i className="fas fa-user"></i> Create Your Account
+        <FontAwesomeIcon icon={faUser} /> Create Your Account
       </p>
       <form className="form" action="create-profile.html">
         <div className="form-group">
