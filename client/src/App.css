@@ -590,7 +590,7 @@ button {
 .spinner > div {
   width: 18px;
   height: 18px;
-  background-color: #333; // Change to your preferred color
+  background-color: #333;
 
   border-radius: 100%;
   display: inline-block;
