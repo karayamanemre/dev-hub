@@ -1,11 +1,11 @@
 import React from 'react';
-import { Navigate, useLocation } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const PrivateRoute = ({ children, isAuthenticated, isLoading, ...rest }) => {
   if (isLoading) {
-    return null; // or some loading component
+    return null;
   }
 
   if (!isAuthenticated) {
