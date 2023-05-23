@@ -24,6 +24,7 @@ const Dashboard = ({
         <FontAwesomeIcon icon={faUser} />
         Welcome {user && user.name}
       </p>
+      {profile !== null ? <div>has</div> : <div>has not</div>}
     </div>
   );
 };
