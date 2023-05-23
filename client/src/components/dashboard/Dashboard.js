@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import Spinner from '../layout/Spinner';
+import { Link } from 'react-router-dom';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -24,7 +25,16 @@ const Dashboard = ({
         <FontAwesomeIcon icon={faUser} />
         Welcome {user && user.name}
       </p>
-      {profile !== null ? <div>has</div> : <div>has not</div>}
+      {profile !== null ? (
+        <div>has</div>
+      ) : (
+        <div>
+          <p>You have not yet setup a profile, please add some info.</p>
+          <Link to="/create-profile" className="btn btn-primary my-1">
+            Create a Profile
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
