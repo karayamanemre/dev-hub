@@ -25,6 +25,8 @@ const CreateProfile = (props) => {
     instagram: '',
   });
 
+  const [displaySocialInputs, toggleSocialInputs] = useState(false);
+
   const {
     company,
     website,
@@ -105,36 +107,45 @@ const CreateProfile = (props) => {
         </div>
 
         <div className="my-2">
-          <button type="button" className="btn btn-light">
+          <button
+            onClick={() => toggleSocialInputs(!displaySocialInputs)}
+            type="button"
+            className="btn btn-light"
+          >
             Add Social Network Links
           </button>
           <span>Optional</span>
         </div>
 
-        <div className="form-group social-input">
-          <FontAwesomeIcon icon={faTwitterSquare} size="2xl" />
-          <input type="text" placeholder="Twitter URL" name="twitter" />
-        </div>
+        {displaySocialInputs && (
+          <div>
+            <div className="form-group social-input">
+              <FontAwesomeIcon icon={faTwitterSquare} size="2xl" />
+              <input type="text" placeholder="Twitter URL" name="twitter" />
+            </div>
 
-        <div className="form-group social-input">
-          <FontAwesomeIcon icon={faFacebookSquare} size="2xl" />
-          <input type="text" placeholder="Facebook URL" name="facebook" />
-        </div>
+            <div className="form-group social-input">
+              <FontAwesomeIcon icon={faFacebookSquare} size="2xl" />
+              <input type="text" placeholder="Facebook URL" name="facebook" />
+            </div>
 
-        <div className="form-group social-input">
-          <FontAwesomeIcon icon={faYoutubeSquare} size="2xl" />
-          <input type="text" placeholder="YouTube URL" name="youtube" />
-        </div>
+            <div className="form-group social-input">
+              <FontAwesomeIcon icon={faYoutubeSquare} size="2xl" />
+              <input type="text" placeholder="YouTube URL" name="youtube" />
+            </div>
 
-        <div className="form-group social-input">
-          <FontAwesomeIcon icon={faLinkedinIn} size="2xl" />
-          <input type="text" placeholder="Linkedin URL" name="linkedin" />
-        </div>
+            <div className="form-group social-input">
+              <FontAwesomeIcon icon={faLinkedinIn} size="2xl" />
+              <input type="text" placeholder="Linkedin URL" name="linkedin" />
+            </div>
 
-        <div className="form-group social-input">
-          <FontAwesomeIcon icon={faInstagramSquare} size="2xl" />
-          <input type="text" placeholder="Instagram URL" name="instagram" />
-        </div>
+            <div className="form-group social-input">
+              <FontAwesomeIcon icon={faInstagramSquare} size="2xl" />
+              <input type="text" placeholder="Instagram URL" name="instagram" />
+            </div>
+          </div>
+        )}
+
         <input type="submit" className="btn btn-primary my-1" />
         <a className="btn btn-light my-1" href="dashboard.html">
           Go Back
